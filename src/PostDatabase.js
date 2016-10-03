@@ -48,7 +48,7 @@ var posts = [
         caption: "Always lost #elections",
         tags: ['elections'],
         comments: [
-            /*{
+            {
                 id: 0,
                 user: {
                     id: 3,
@@ -57,7 +57,7 @@ var posts = [
                 comment: "Right",
                 userRefs: [],
                 tags: []
-            }*/
+            }
         ]
     }
 ]
