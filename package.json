@@ -1,0 +1,23 @@
+{
+  "name": "instafake_api",
+  "version": "1.0.0",
+  "description": "InstaFAKE API",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galaxyangelz/instaFAKE_API.git"
+  },
+  "author": "Duc Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galaxyangelz/instaFAKE_API/issues"
+  },
+  "homepage": "https://github.com/galaxyangelz/instaFAKE_API#readme"
+}
