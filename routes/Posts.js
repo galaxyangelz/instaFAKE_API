@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 var PostDatabase = require('../src/PostsData');
 
-function getPosts(req, res){
-	res.json(PostDatabase.getPosts());
+function getAllPosts(req, res){
+	res.json(PostDatabase.getAllPosts());
 }
 
-router.route('/posts').get(getPosts);
+router.route('/posts').get(getAllPosts);
 
 module.exports = router;
