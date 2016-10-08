@@ -4,6 +4,13 @@ var express = require('express');
 var router = express.Router();
 var multer = require('multer');
 
+cloudinary.config({
+	cloud_name: 'galaxyangelzz', 
+	api_key: '456517264879296', 
+	api_secret: '5PO8mpX_F5_KGfrHhVR_uTDfkMI' 
+
+})
+
 var PostDatabase = require('../src/PostDatabase');
 
 // Config cloudinary storage for multer-storage-cloudinary
