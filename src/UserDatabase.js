@@ -15,10 +15,11 @@ exports.all = function() {
 exports.add = function(user) {
     users.push(user);
 }
-exports.get = function (userID) {
+exports.edit = function (userID, newinfo) {
     for (var i = 0; i < users.length; i++) {
         if (users[i].id === parseInt(userID)) {
-            return users[i];
+            users.splice(i,1);
+            users.push(newinfo);
         }
     }
 }

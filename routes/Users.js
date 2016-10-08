@@ -58,15 +58,15 @@ function register(req, res) {
 
 }
 function editUserInfo(req, res) {
-    var PersonInfo = UserDatabase.get(req.params.id);
-    var newInfo = req.body;
-    PersonInfo = newInfo;
+    UserDatabase.edit(req.params.id, req.body);
+    console.log(UserDatabase.all());
     return res.sendStatus(200);
 }
 
 router.route('/user').get(function(req, res) {
     res.json(UserDatabase.all());
 })
+
 router.route('/login').post(authorization);
 router.route('/register').post(register);
 router.route('/edit/:id').put(editUserInfo);
