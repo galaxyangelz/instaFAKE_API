@@ -15,3 +15,10 @@ exports.all = function() {
 exports.add = function(user) {
     users.push(user);
 }
+exports.get = function (userID) {
+    for (var i = 0; i < users.length; i++) {
+        if (users[i].id === parseInt(userID)) {
+            return users[i];
+        }
+    }
+}

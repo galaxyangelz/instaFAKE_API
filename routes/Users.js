@@ -57,9 +57,17 @@ function register(req, res) {
     }
 
 }
+function editUserInfo(req, res) {
+    var PersonInfo = UserDatabase.get(req.params.id);
+    var newInfo = req.body;
+    PersonInfo = newInfo;
+    return res.sendStatus(200);
+}
+
 router.route('/user').get(function(req, res) {
     res.json(UserDatabase.all());
 })
 router.route('/login').post(authorization);
 router.route('/register').post(register);
+router.route('/edit/:id').put(editUserInfo);
 module.exports = router;

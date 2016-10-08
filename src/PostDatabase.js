@@ -27,25 +27,25 @@ var posts = [
 ];
 
 exports.all = function() {
-            return posts;
-        }
+    return posts;
+}
 exports.add = function(newData) {
-            posts.push(newData);
-        }
+    posts.push(newData);
+}
 // posts from myself and the from the users i am following
 exports.following = function () {
-            return $q(function (resolve, reject) {
-                resolve(posts);
-            });
-        }
+    return $q(function (resolve, reject) {
+        resolve(posts);
+    });
+}
 //get all comments in a post
 exports.get = function (postID) {
-            for (var i = 0; i < posts.length; i++) {
-                if (posts[i].id === parseInt(postID)) {
-                    return posts[i];
-                }
-            }
+    for (var i = 0; i < posts.length; i++) {
+        if (posts[i].id === parseInt(postID)) {
+            return posts[i];
         }
+    }
+}
 /*
 
         // most recent posts 
