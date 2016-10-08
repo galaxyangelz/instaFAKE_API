@@ -24,7 +24,7 @@ var posts = [
             }
         ]
     }
-]
+];
 
 exports.all = function() {
             return posts;
@@ -32,12 +32,22 @@ exports.all = function() {
 exports.add = function(newData) {
             posts.push(newData);
         }
-        // posts from myself and the from the users i am following
+// posts from myself and the from the users i am following
 exports.following = function () {
             return $q(function (resolve, reject) {
                 resolve(posts);
             });
         }
+//get all comments in a post
+exports.get = function (postID) {
+            for (var i = 0; i < posts.length; i++) {
+                if (posts[i].id === parseInt(postID)) {
+                    return posts[i];
+                }
+            }
+        }
+/*
+
         // most recent posts 
 exports.recent = function () {
             return $q(function (resolve, reject) {
@@ -50,14 +60,6 @@ exports.searchTag = function () {
                 resolve(posts);
             });
         }
-        //get all comments in a post
-exports.get = function (postID) {
-            for (var i = 0; i < posts.length; i++) {
-                if (posts[i].id === parseInt(postID)) {
-                    return posts[i];
-                }
-            }
-        }
         // get all posts of single user
 exports.getUserPosts = function (userId) {
             return $q(function (resolve, reject) {
@@ -67,3 +69,4 @@ exports.getUserPosts = function (userId) {
                 resolve(posts); // placeholder
             });
         }
+*/
