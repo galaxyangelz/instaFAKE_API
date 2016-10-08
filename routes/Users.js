@@ -15,7 +15,7 @@ function authorization(req, res){
 
     if(u !== undefined)
     {
-        return res.json({id: u.id, username: u.username});
+        return res.json(u);
     }
     else
     {
