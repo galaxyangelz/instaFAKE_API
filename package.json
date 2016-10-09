@@ -10,7 +10,8 @@
     "express": "^4.14.0",
     "multer": "^1.2.0",
     "multer-storage-cloudinary": "^1.2.1",
-    "random-id": "0.0.2"
+    "random-id": "0.0.2",
+    "request": "^2.75.0"
   },
   "devDependencies": {},
   "scripts": {
