@@ -45,6 +45,10 @@ function getPostCloudinary(req, res) {
 function getAllPosts(req, res){
 	res.json(PostDatabase.all());
 }
+router.route('/add').post(function (req,res) {
+	PostDatabase.add(res.body);
+	res.sendStatus(201);
+}
 router.route('/download').get(getPostCloudinary);
 router.post('/upload', parser.single('image'), function (req, res) {       
     res.sendStatus(201);
